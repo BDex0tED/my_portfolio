@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manas's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="top-nav">
+  <div class="container">
+    <div class="top-nav__wrapper">
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Recent Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="top-nav__logos">
+        <a href="#"><img src="linkedin.png" alt=""></a>
+        <a href="#"><img src="behance.png" alt=""></a>
+        <a href="#"><img src="twitter.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-info">
+      <h1>Manas Abdrasulov</h1>
+      <p>Cheers bro. My name is Manas and I'm a Java Backend developer.</p>
+      <a href="#" class="btn-primary">Let’s get started ➜</a>
+    </div>
+    <div class="hero-image">
+      <img src="man_img.png" alt="Manas Photo" />
+    </div>
+  </div>
+
+  <div class="clients container">
+    <p>Worked with</p>
+    <div class="client-logos">
+      <div>Java Core</div>
+      <div>Spring Boot</div>
+      <div>Spring MVC</div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2>Testimonials</h2>
+    <p>Some nice words from my friends 😎</p>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>Manas sigma</p>
+        <div class="client-info">
+          <img src="uzar-hape.png" alt="Client 1">
+          <span>Uzar</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>Bro really cooked this portfolio 🔥</p>
+        <div class="client-info">
+          <img src="uzar-hape.png" alt="Client 2">
+          <span>Uz0r0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-work">
+  <div class="container">
+    <h2>Recent Work</h2>
+    <p>Here’s what I’ve been working on lately.</p>
+    <div class="work-grid">
+      <div class="work-card">
+        <img src="umai.png" alt="UmAI Project">
+        <h3>UmAI</h3>
+        <p>UmAI — your literary world.</p>
+        <a href="https://github.com/JGRex-Joy/umAI" class="btn-green">Know more ➜</a>
+      </div>
+      <div class="work-card">
+        <img src="recentwork2.png" alt="Project 2">
+        <h3>Work name here</h3>
+        <p>Reprehenderit in voluptate velit esse cillum dolore.</p>
+        <a href="#" class="btn-green">Know more ➜</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p>Let’s talk about cool Java or Spring projects!</p>
+    <form id="contact-form" class="contact-form">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="tel" id="phone" placeholder="Enter mobile" required>
+      <textarea id="message" placeholder="Enter your message" rows="5" required></textarea>
+      <button type="submit">Submit ➜</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Made with ❤️ by Manas</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
