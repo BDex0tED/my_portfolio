@@ -62,7 +62,7 @@ img { max-width: 100%; display: block; }
 
 .top-nav__logos a img {
   width: 26px;
-  filter: invert(0.8);
+  filter: invert(1);
   transition: 0.3s;
 }
 
@@ -133,6 +133,7 @@ img { max-width: 100%; display: block; }
     border-radius: 4px;
     font-weight: 600;
     transition: 0.3s;
+    border: none;
 }
 
 .btn-primary:hover {
@@ -334,6 +335,134 @@ img { max-width: 100%; display: block; }
     background: linear-gradient(to right, #55c057, #2e7d32);
 }
 
+.contact__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.contact__wrapper-leftside {
+    max-width: 50%;
+  flex: 1;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0077b5;
+  outline: none;
+}
+
+.contact-form button {
+  background: #2ea043;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #2e7d32;
+}
+
+.contact__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Правая часть — вертикальные кнопки */
+.contact__wrapper-rightside {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  flex: 0 0 250px;
+}
+
+/* Общие стили для кнопок */
+.contact__wrapper-rightside a {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 18px 0;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+/* Индивидуальные цвета */
+.linkedin {
+  background-color: #0077b5;
+}
+
+.github {
+  background-color: #2ea043;
+}
+
+.email {
+  background-color: #6c757d;
+}
+
+/* Hover эффекты */
+.linkedin:hover {
+  background-color: #005f8d;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 119, 181, 0.3);
+}
+
+.github:hover {
+  background-color: #238636;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(46, 160, 67, 0.3);
+}
+
+.email:hover {
+  background-color: #5a6268;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(108, 117, 125, 0.3);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .contact__wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact__wrapper-rightside {
+    flex: 1;
+    width: 100%;
+  }
+
+  .contact__wrapper-rightside button {
+    font-size: 16px;
+  }
+}
+
 /* ========== Footer ========== */
 .footer {
     background-color: #1a1a1a;
@@ -462,4 +591,147 @@ body.menu-open {
 }
 .burger.open span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* NEW: Theme Toggle Button Styles */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem; /* Larger for icon */
+    padding: 0;
+    line-height: 1; /* Aligns the icon nicely */
+    color: #ccc; /* Default color (can be customized) */
+    transition: transform 0.3s;
+    margin-right: 15px; /* Spacing from the first social icon */
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Update social media icons visibility for mobile */
+@media (max-width: 768px) {
+    /* Make sure the theme toggle button is also hidden on small screens if you want to keep the header clean */
+    .top-nav__logos { 
+        display: flex; /* Change to flex to show theme button if you want it visible */
+        align-items: center;
+    } 
+    /* You might want to hide the social logos and keep the theme button, or hide both. 
+       Let's only hide the social media links for now. */
+    .top-nav__logos a {
+        display: none;
+    }
+    .theme-toggle {
+        display: block; /* Ensure it shows up */
+    }
+}
+
+/* ------------------------------------- */
+/* ========== Light Mode Styles ========== */
+/* ------------------------------------- */
+
+body.light-mode {
+    background: #fff;
+    color: #000; /* Dark text */
+}
+
+/* Header */
+body.light-mode .top-nav {
+    background-color: #e8e8e8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .nav-links a {
+    color: #333;
+}
+
+body.light-mode .burger span {
+    background: #333;
+}
+
+body.light-mode .top-nav__logos a img {
+    filter: invert(0.2); /* Make social icons dark */
+}
+
+body.light-mode .top-nav__logos a img:hover {
+    filter: invert(0);
+}
+
+/* Hero Section */
+body.light-mode .hero-info p {
+    color: #555;
+}
+
+/* Primary Button (Optional: can keep it green) */
+body.light-mode .btn-primary {
+    /* background: #007bff; */
+}
+
+/* Clients/Skills */
+body.light-mode .clients p {
+    color: #333;
+}
+
+body.light-mode .hero {
+    background: #fff;
+
+}
+
+body.light-mode .client-logos div {
+    border: 1px solid #333;
+    color: #333;
+}
+
+body.light-mode .client-logos div:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Testimonials */
+body.light-mode .testimonials {
+    background-color: #e8e8e8;
+}
+
+body.light-mode .testimonials p {
+    color: #555;
+}
+
+body.light-mode .testimonial-card {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+body.light-mode .testimonial-card p {
+    color: #333;
+}
+
+/* Recent Work (already light, but adjust text) */
+body.light-mode .recent-work {
+    background: #fff;
+}
+
+body.light-mode .work-card {
+    background: #f4f4f4;
+}
+
+/* Contact */
+body.light-mode .contact {
+    background: #e8e8e8;
+    color: #333;
+}
+
+body.light-mode .contact-form input, body.light-ыmode .contact-form textarea {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+/* Footer */
+body.light-mode .footer {
+    background-color: #ccc;
+    color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
 }
